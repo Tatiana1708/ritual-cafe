@@ -1,9 +1,9 @@
-import 'package:flushbar/flushbar.dart';
+// import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ritual_cafe/model/user.dart';
+// import 'package:ritual_cafe/model/user.dart';
 import 'package:ritual_cafe/providers/auth.dart';
-import 'package:ritual_cafe/providers/user_provider.dart';
+// import 'package:ritual_cafe/providers/user_provider.dart';
 import 'package:ritual_cafe/themes/color.dart';
 import 'package:ritual_cafe/utils/validators.dart';
 import 'package:ritual_cafe/utils/widgets.dart';
@@ -50,19 +50,22 @@ class _LoginState extends State<Login> {
     final incription = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        // ignore: deprecated_member_use
-        FlatButton(
+        MaterialButton(
           color: Colors.grey.shade100.withOpacity(0.2),
           height: 45,
-          minWidth: 346,
+          minWidth: 348,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10))),
-          child: Text("Créer un compte",
-              style:
-                  TextStyle(fontWeight: FontWeight.w300, color: Colors.white)),
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/register');
           },
+          child: SizedBox(
+            child: Text(
+              "Créer un compte",
+              style:
+                  TextStyle(fontWeight: FontWeight.w300, color: Colors.white),
+            ),
+          ),
         ),
       ],
     );

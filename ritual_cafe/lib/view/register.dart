@@ -63,19 +63,22 @@ class _RegisterState extends State<Register> {
 
     final connexion = Row(
       children: <Widget>[
-        // ignore: deprecated_member_use
-        FlatButton(
+        MaterialButton(
           color: Colors.grey.shade100.withOpacity(0.2),
           height: 45,
-          minWidth: 346,
+          minWidth: 348,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10))),
-          child: Text("Connexion",
-              style:
-                  TextStyle(fontWeight: FontWeight.w300, color: Colors.white)),
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/login');
           },
+          child: SizedBox(
+            child: Text(
+              "Connexion",
+              style:
+                  TextStyle(fontWeight: FontWeight.w300, color: Colors.white),
+            ),
+          ),
         ),
       ],
     );
